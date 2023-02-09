@@ -1,0 +1,24 @@
+{
+	"name": "product_preview_card_component",
+	"version": "1.0.0",
+	"description": "This is a solution to the [Product preview card component challenge on Frontend Mentor](https://www.frontendmentor.io/challenges/product-preview-card-component-GO7UmttRfa). Frontend Mentor challenges help you improve your coding skills by building realistic projects.",
+	"main": "index.html",
+	"scripts": {
+		"sync": "browser-sync start --proxy 'https://pinabu.localhost' --files './site/modules' './site/templates' --no-open --https",
+		"dev": "concurrently --names \"SYNC\" -c \"bgBlue.bold,\" \"npm run sync\""
+	},
+	"repository": {
+		"type": "git",
+		"url": "git+https://github.com/paulbrause/product_preview_card_component.git"
+	},
+	"author": "",
+	"license": "ISC",
+	"bugs": {
+		"url": "https://github.com/paulbrause/product_preview_card_component/issues"
+	},
+	"homepage": "https://github.com/paulbrause/product_preview_card_component#readme",
+	"devDependencies": {
+		"browser-sync": "latest",
+		"concurrently": "latest"
+	}
+}
