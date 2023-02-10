@@ -1,3 +1,115 @@
+*, *:before, *:after {
+  box-sizing: border-box;
+}
 
+html, body, div, span, object, iframe, figure, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, code, em, img, small, strike, strong, sub, sup, tt, b, u, i, ol, ul, li, fieldset, form, label, table, caption, tbody, tfoot, thead, tr, th, td, main, canvas, embed, footer, header, nav, section, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  text-size-adjust: none;
+}
+
+footer, header, nav, section, main {
+  display: block;
+}
+
+body {
+  line-height: 1;
+}
+
+ol, ul {
+  list-style: none;
+}
+
+blockquote, q {
+  quotes: none;
+}
+
+blockquote:before, blockquote:after, q:before, q:after {
+  content: "";
+  content: none;
+}
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+input {
+  -webkit-appearance: none;
+  border-radius: 0;
+}
+
+body {
+  background-color: hsl(30deg, 38%, 92%);
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  gap: 1rem;
+  padding: 1rem 0.5rem;
+}
+body .wrapper {
+  flex-grow: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.card {
+  background-color: hsl(0deg, 0%, 100%);
+  width: 100%;
+  overflow: hidden;
+  border-radius: 10px;
+}
+.card .image img {
+  width: 100%;
+  max-width: 100%;
+  aspect-ratio: 4/3;
+  object-position: center;
+  object-fit: cover;
+}
+.card .info {
+  padding: 1.5rem;
+  color: hsl(228deg, 12%, 48%);
+}
+.card .info h3 {
+  text-transform: uppercase;
+}
+.card .info h1 {
+  color: hsl(212deg, 21%, 14%);
+}
+.card .info .price {
+  color: hsl(158deg, 36%, 37%);
+}
+.card .info .price .old {
+  color: hsl(228deg, 12%, 48%);
+}
+.card .info button {
+  width: 100%;
+  border: none;
+  background-color: hsl(158deg, 36%, 37%);
+  color: hsl(0deg, 0%, 100%);
+  border-radius: 5px;
+}
+
+.attribution {
+  font-size: 12.6px;
+  color: hsl(228deg, 12%, 48%);
+}
+.attribution a {
+  color: hsl(158deg, 36%, 37%);
+  text-decoration: none;
+}
+.attribution a:hover {
+  text-decoration: underline;
+}
 
 /*# sourceMappingURL=main.css.map */
