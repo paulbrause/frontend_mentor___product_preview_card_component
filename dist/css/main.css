@@ -186,7 +186,7 @@ body .wrapper {
   cursor: pointer;
   transition: background-color 200ms ease-in-out;
 }
-.card .info button:hover {
+.card .info button:focus {
   background-color: #1c3b30;
 }
 
