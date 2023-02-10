@@ -4,8 +4,9 @@
 	"description": "This is a solution to the [Product preview card component challenge on Frontend Mentor](https://www.frontendmentor.io/challenges/product-preview-card-component-GO7UmttRfa). Frontend Mentor challenges help you improve your coding skills by building realistic projects.",
 	"main": "index.html",
 	"scripts": {
-		"sync": "browser-sync start --proxy 'https://pinabu.localhost' --files './site/modules' './site/templates' --no-open --https",
-		"dev": "concurrently --names \"SYNC\" -c \"bgBlue.bold,\" \"npm run sync\""
+		"sync": "browser-sync start --proxy 'https://localhost/___frontendmentor_io/product_preview_card_component/' --files './*.html' './dist/**/*.*' --no-open --https",
+		"watch:sass": "sass --watch src/sass:dist/css",
+		"dev": "concurrently --names \"SYNC, SASS\" -c \"bgBlue.bold,bgMagenta.bold,\" \"npm run sync\" \"npm run watch:sass\""
 	},
 	"repository": {
 		"type": "git",
@@ -19,6 +20,7 @@
 	"homepage": "https://github.com/paulbrause/product_preview_card_component#readme",
 	"devDependencies": {
 		"browser-sync": "latest",
-		"concurrently": "latest"
+		"concurrently": "latest",
+		"sass": "^1.58.0"
 	}
 }
