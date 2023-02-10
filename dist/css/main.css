@@ -1,3 +1,27 @@
+@font-face {
+  font-display: swap;
+  font-family: "Montserrat";
+  font-weight: 500;
+  font-style: normal;
+  src: url("../fonts/montserrat-v25-latin-500.eot");
+  src: url("../fonts/montserrat-v25-latin-500.eot?#iefix") format("embedded-opentype"), url("../fonts/montserrat-v25-latin-500.woff2") format("woff2"), url("../fonts/montserrat-v25-latin-500.woff") format("woff"), url("../fonts/montserrat-v25-latin-500.ttf") format("truetype"), url("../fonts/montserrat-v25-latin-500.svg#Montserrat") format("svg");
+}
+@font-face {
+  font-display: swap;
+  font-family: "Montserrat";
+  font-weight: 700;
+  font-style: normal;
+  src: url("../fonts/montserrat-v25-latin-700.eot");
+  src: url("../fonts/montserrat-v25-latin-700.eot?#iefix") format("embedded-opentype"), url("../fonts/montserrat-v25-latin-700.woff2") format("woff2"), url("../fonts/montserrat-v25-latin-700.woff") format("woff"), url("../fonts/montserrat-v25-latin-700.ttf") format("truetype"), url("../fonts/montserrat-v25-latin-700.svg#Montserrat") format("svg");
+}
+@font-face {
+  font-display: swap;
+  font-family: "Fraunces";
+  font-weight: 500;
+  font-style: normal;
+  src: url("../fonts/fraunces-v26-latin-500.eot");
+  src: url("../fonts/fraunces-v26-latin-500.eot?#iefix") format("embedded-opentype"), url("../fonts/fraunces-v26-latin-500.woff2") format("woff2"), url("../fonts/fraunces-v26-latin-500.woff") format("woff"), url("../fonts/fraunces-v26-latin-500.ttf") format("truetype"), url("../fonts/fraunces-v26-latin-500.svg#Montserrat") format("svg");
+}
 *, *:before, *:after {
   box-sizing: border-box;
 }
@@ -45,6 +69,11 @@ input {
   border-radius: 0;
 }
 
+html {
+  font-family: "Montserrat", serif;
+  font-weight: 500;
+}
+
 body {
   background-color: hsl(30deg, 38%, 92%);
   width: 100vw;
@@ -64,45 +93,107 @@ body .wrapper {
 }
 
 .card {
+  display: flex;
+  flex-direction: column;
+  justify-content: stretch;
   background-color: hsl(0deg, 0%, 100%);
   width: 100%;
   overflow: hidden;
   border-radius: 10px;
+  max-width: 375px;
+}
+@media (min-width: 1440px) {
+  .card {
+    max-width: 576px;
+    flex-direction: row;
+  }
+}
+@media (max-width: 1440px) {
+  .card .image {
+    aspect-ratio: 4/3;
+    background-color: red;
+    overflow: hidden;
+  }
+}
+@media (min-width: 1440px) {
+  .card .image {
+    width: 50%;
+  }
 }
 .card .image img {
   width: 100%;
-  max-width: 100%;
-  aspect-ratio: 4/3;
+  height: 100%;
   object-position: center;
   object-fit: cover;
 }
 .card .info {
-  padding: 1.5rem;
+  padding: 1.75rem;
   color: hsl(228deg, 12%, 48%);
 }
-.card .info h3 {
-  text-transform: uppercase;
+@media (min-width: 1440px) {
+  .card .info {
+    width: 50%;
+  }
 }
-.card .info h1 {
+.card .info .category {
+  text-transform: uppercase;
+  font-size: 0.8rem;
+  letter-spacing: 0.3rem;
+  margin-bottom: 1rem;
+}
+.card .info .title {
   color: hsl(212deg, 21%, 14%);
+  font-family: "Fraunces", sans;
+  font-weight: 900;
+  font-size: 2rem;
+  margin-bottom: 1rem;
+}
+.card .info .description {
+  font-size: 0.9rem;
+  line-height: 1.5rem;
+  margin-bottom: 1.5rem;
 }
 .card .info .price {
+  display: flex;
+  font-family: "Fraunces", sans;
+  font-weight: 700;
+  font-size: 2rem;
   color: hsl(158deg, 36%, 37%);
+  align-items: center;
+  margin-bottom: 1.5rem;
+  gap: 1.5rem;
 }
 .card .info .price .old {
+  font-family: "Montserrat", serif;
+  font-weight: 500;
+  font-size: 0.9rem;
   color: hsl(228deg, 12%, 48%);
+  text-decoration: line-through;
 }
 .card .info button {
   width: 100%;
   border: none;
   background-color: hsl(158deg, 36%, 37%);
   color: hsl(0deg, 0%, 100%);
-  border-radius: 5px;
+  border-radius: 10px;
+  font-weight: 700;
+  padding: 1rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 1rem;
+  font-size: 0.9rem;
+  cursor: pointer;
+  transition: background-color 200ms ease-in-out;
+}
+.card .info button:hover {
+  background-color: #1c3b30;
 }
 
 .attribution {
   font-size: 12.6px;
   color: hsl(228deg, 12%, 48%);
+  text-align: center;
 }
 .attribution a {
   color: hsl(158deg, 36%, 37%);
